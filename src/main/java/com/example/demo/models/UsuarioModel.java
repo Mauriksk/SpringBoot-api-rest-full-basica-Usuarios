@@ -3,9 +3,22 @@ package com.example.demo.models;
 
 import javax.persistence.*;
 
+
+/**
+ * En UsuarioModel creamos la representacion de la tabla en la base de datos mySQL
+ * Con la etiqueta Entity le decimos a java que es un modelo real
+ * Con la etiqueta Table renombramos el nombre que va a tener la tabla, que hubiera sido UsuarioModel, pero ahora
+ * Pasa a ser usuario.
+ */
+
 @Entity
 @Table(name = "usuario")
 public class UsuarioModel {
+
+
+    /**
+     * Es un id, Se genera automaticamente, es unico y no puede ser null
+     */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

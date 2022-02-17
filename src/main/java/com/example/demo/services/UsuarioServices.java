@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * UsuarioServices es una clase de tipo Service, esta para poder implementar el repository, inicializamos una variable de tipo
+ * UsuarioRepositories y le ponemos @AutoWired para que java sepa que ya existe una instancia y que es esta de la cual debe instanciar la variable.
+ */
+
 @Service
 public class UsuarioServices {
     @Autowired
