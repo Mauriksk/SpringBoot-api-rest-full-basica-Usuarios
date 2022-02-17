@@ -30,6 +30,12 @@ public class UsuarioServices {
         return usuarioRepositories.findById(id);
     }
 
+
+    /**
+     * Toma todos los usuarios y los borra
+     * @return true si es correcto, false si es un error
+     */
+
     public boolean borrarTodosUsuarios(){
         try {
             usuarioRepositories.deleteAll();
