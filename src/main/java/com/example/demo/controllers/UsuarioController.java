@@ -52,6 +52,22 @@ public class UsuarioController {
         return this.usuarioServices.obtenerPorId(id);
     }
 
+
+    /**
+     * Elimina todos los ususarios
+     * @return Informa con un mensaje si se realizo correctamente o no.
+     */
+    @DeleteMapping()
+    public String borrarTodosUsuarios(){
+        boolean ok = this.usuarioServices.borrarTodosUsuarios();
+        if(ok){
+            return "Se eliminaron todos los usuarios con exito bye bye Babys " ;
+        }else{
+            return  "No pudo eliminar los usuarios";
+        }
+    }
+
+
     /**
      * Obtenemos usuario por prioridad y lo especificamos en el query Ej
      * http://localhost8080/usuario/query?prioridad=5 despues del signo de interrogacion ponemos la variable y a que es igual su valor
@@ -63,7 +79,6 @@ public class UsuarioController {
     public ArrayList<UsuarioModel> obtenerUsuarioPorPrioridad(@RequestParam("prioridad") Integer prioridad){
         return this.usuarioServices.obtenerPorPrioridad(prioridad);
     }
-
 
     /**
      * Elimina un usuario segun el id ingresado

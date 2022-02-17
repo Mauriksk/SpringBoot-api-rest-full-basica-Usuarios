@@ -30,6 +30,16 @@ public class UsuarioServices {
         return usuarioRepositories.findById(id);
     }
 
+    public boolean borrarTodosUsuarios(){
+        try {
+            usuarioRepositories.deleteAll();
+            return true;
+        }catch (Exception err){
+            return false;
+        }
+
+    }
+
     public ArrayList<UsuarioModel> obtenerPorPrioridad(Integer prioridad){
         return usuarioRepositories.findByPrioridad(prioridad);
     }

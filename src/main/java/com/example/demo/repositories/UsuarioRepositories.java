@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 /**
  * El UsuarioRepositories es el que se encargara de implementar la interaccion con la base de datos, como va a implementar metodos
@@ -21,4 +22,6 @@ public interface UsuarioRepositories extends CrudRepository<UsuarioModel, Long> 
      * @return Retorna los usuarios con la prioridad asignada
      */
     public abstract ArrayList<UsuarioModel> findByPrioridad(Integer prioridad);
+
+
 }
